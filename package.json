@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "scripts": {
+    "update": "node scripts/update-icons.js"
+  }
+}
+
