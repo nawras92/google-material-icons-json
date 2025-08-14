@@ -1,34 +1,64 @@
 // scripts/update-icons.js
 import { writeFileSync } from 'fs';
 
-const CURRENT_VERSIONS_URL =
-  'https://raw.githubusercontent.com/google/material-design-icons/refs/heads/master/update/current_versions.json';
+const METADATA_URL = 'https://fonts.google.com/metadata/icons';
 
 async function main() {
-  console.log('Fetching current_versions.json...');
-  const res = await fetch(CURRENT_VERSIONS_URL);
-  if (!res.ok)
-    throw new Error(`Failed to fetch current_versions.json: ${res.status}`);
-  const data = await res.json();
+  console.log('Fetching Google Fonts icon metadata...');
 
-  const categoryMap = {};
+  const res = await fetch(METADATA_URL);
+  if (!res.ok) throw new Error(`Failed to fetch metadata: ${res.status}`);
 
-  // Process each key: "category::icon_name"
-  for (const key of Object.keys(data)) {
-    const [category, name] = key.split('::');
-    if (!categoryMap[category]) categoryMap[category] = [];
-    categoryMap[category].push(name);
+  let text = await res.text();
+
+  // Remove the first line `)]}'`
+  if (text.startsWith(")]}'")) {
+    text = text.substring(4);
   }
 
-  // Transform into array of { category, icons }
+  const data = JSON.parse(text);
+
+  if (!data.icons || !Array.isArray(data.icons)) {
+    throw new Error('Invalid icon metadata format');
+  }
+
+  // Create category map: { category: [ { name, tags } ] }
+  const categoryMap = {};
+
+  for (const icon of data.icons) {
+    // Skip if unsupported families exist
+    if (icon.unsupported_families && icon.unsupported_families.length > 0) {
+      continue;
+    }
+
+    const categories = icon.categories || ['uncategorized'];
+    for (const category of categories) {
+      if (!categoryMap[category]) {
+        categoryMap[category] = [];
+      }
+      categoryMap[category].push({
+        name: icon.name,
+        tags: icon.tags || [],
+      });
+    }
+  }
+
+  // Transform into array format
   const results = Object.entries(categoryMap).map(([category, icons]) => ({
     category,
     icons,
   }));
 
-  // Save JSON
+  // Save to file
   writeFileSync('data/icons.json', JSON.stringify(results, null, 2));
-  console.log(`Saved ${results.length} categories to data/icons.json`);
+  console.log(`✅ Saved ${results.length} categories to data/icons.json`);
+
+  // Optional: save category list separately
+  const categoryList = Object.keys(categoryMap).sort();
+  writeFileSync('data/categories.json', JSON.stringify(categoryList, null, 2));
+  console.log(
+    `✅ Saved ${categoryList.length} categories to data/categories.json`
+  );
 }
 
 main().catch((err) => {
