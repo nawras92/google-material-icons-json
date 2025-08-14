@@ -17,9 +17,7 @@ async function main() {
   for (const key of Object.keys(data)) {
     const [category, name] = key.split('::');
     if (!categoryMap[category]) categoryMap[category] = [];
-    categoryMap[category].push({
-      name,
-    });
+    categoryMap[category].push(name);
   }
 
   // Transform into array of { category, icons }

@@ -14,14 +14,14 @@ Example JSON structure:
   {
     "category": "navigation",
     "icons": [
-      { "name": "home" },
-      { "name": "arrow_back" }
+      "home",
+      "arrow_back" 
     ]
   },
   {
     "category": "social",
     "icons": [
-      { "name": "person" }
+     "person" 
     ]
   }
 ]
