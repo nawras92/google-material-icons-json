@@ -3107,33 +3107,6 @@
         ]
       },
       {
-        "name": "play_circle_filled",
-        "tags": [
-          "arrow",
-          "circle",
-          "control",
-          "controls",
-          "media",
-          "music",
-          "play",
-          "video"
-        ]
-      },
-      {
-        "name": "play_circle_outline",
-        "tags": [
-          "arrow",
-          "circle",
-          "control",
-          "controls",
-          "media",
-          "music",
-          "outline",
-          "play",
-          "video"
-        ]
-      },
-      {
         "name": "play_disabled",
         "tags": [
           "audio control",
@@ -42450,10 +42423,6 @@
         ]
       },
       {
-        "name": "discount",
-        "tags": []
-      },
-      {
         "name": "do_not_disturb_on_total_silence",
         "tags": [
           "alarms off",
@@ -46887,38 +46856,6 @@
         ]
       },
       {
-        "name": "signal_wifi_statusbar_connected_no_internet_4",
-        "tags": [
-          "!",
-          "4",
-          "alert",
-          "attention",
-          "caution",
-          "cell",
-          "cellular",
-          "connected",
-          "danger",
-          "data",
-          "error",
-          "exclamation",
-          "important",
-          "internet",
-          "mark",
-          "mobile",
-          "network",
-          "no",
-          "notification",
-          "phone",
-          "signal",
-          "speed",
-          "statusbar",
-          "symbol",
-          "warning",
-          "wifi",
-          "wireless"
-        ]
-      },
-      {
         "name": "signal_wifi_statusbar_null",
         "tags": [
           "arc",
@@ -50872,10 +50809,6 @@
         ]
       },
       {
-        "name": "fire_hydrant_alt",
-        "tags": []
-      },
-      {
         "name": "fire_truck",
         "tags": [
           "911",
@@ -53020,10 +52953,6 @@
           "warning",
           "wreck"
         ]
-      },
-      {
-        "name": "miscellaneous_services",
-        "tags": []
       },
       {
         "name": "mode_of_travel",

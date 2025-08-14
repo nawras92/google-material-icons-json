@@ -1,7 +1,16 @@
-// scripts/update-icons.js
 import { writeFileSync } from 'fs';
 
 const METADATA_URL = 'https://fonts.google.com/metadata/icons';
+
+// List of icons to exclude
+const SKIP_ICONS = [
+  'play_circle_filled',
+  'play_circle_outline',
+  'discount',
+  'signal_wifi_statusbar_connected_no_internet_4',
+  'fire_hydrant_alt',
+  'miscellaneous_services'
+];
 
 async function main() {
   console.log('Fetching Google Fonts icon metadata...');
@@ -28,6 +37,11 @@ async function main() {
   for (const icon of data.icons) {
     // Skip if unsupported families exist
     if (icon.unsupported_families && icon.unsupported_families.length > 0) {
+      continue;
+    }
+
+    // Skip if in hard-coded exclude list
+    if (SKIP_ICONS.includes(icon.name)) {
       continue;
     }
 
@@ -65,3 +79,4 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
