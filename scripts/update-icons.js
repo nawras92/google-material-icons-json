@@ -9,7 +9,12 @@ const SKIP_ICONS = [
   'discount',
   'signal_wifi_statusbar_connected_no_internet_4',
   'fire_hydrant_alt',
-  'miscellaneous_services'
+  'miscellaneous_services',
+  'catching_pokemon',
+  'fitbit',
+  'pix',
+  'person_remove_alt_1',
+  'person_add_alt_1',
 ];
 
 async function main() {
@@ -79,4 +84,3 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
-
