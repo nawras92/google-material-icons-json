@@ -24310,9 +24310,13 @@
       {
         "name": "offline_bolt",
         "tags": [
+          "adapter",
           "alert",
+          "batteries",
           "bolt",
+          "charger",
           "circle",
+          "device",
           "disconnected",
           "electric",
           "electricity",
@@ -24327,6 +24331,7 @@
           "lightning",
           "line",
           "mark",
+          "nest",
           "network error",
           "no internet",
           "no signal",
