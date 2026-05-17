@@ -8128,9 +8128,7 @@
       {
         "name": "crop_16_9",
         "tags": [
-          "16",
           "16:9",
-          "9",
           "adjust",
           "adjustments",
           "area",
@@ -8173,8 +8171,6 @@
       {
         "name": "crop_3_2",
         "tags": [
-          "2",
-          "3",
           "3 by 2",
           "3:2",
           "3x2",
@@ -8217,8 +8213,6 @@
       {
         "name": "crop_5_4",
         "tags": [
-          "4",
-          "5",
           "5:4",
           "adjust",
           "adjustments",
@@ -8230,7 +8224,7 @@
           "crop",
           "dimension",
           "edit",
-          "editing settings",
+          "editing",
           "editing tools",
           "five by four",
           "format",
@@ -8250,6 +8244,7 @@
           "ratio",
           "rectangle",
           "resize",
+          "settings",
           "shape",
           "size",
           "square",
@@ -8262,8 +8257,6 @@
       {
         "name": "crop_7_5",
         "tags": [
-          "5",
-          "7",
           "7:5 ratio",
           "adjust",
           "adjustments",
