@@ -8175,13 +8175,11 @@
       {
         "name": "dashboard",
         "tags": [
-          "add",
           "cards",
           "dashboard",
           "format",
           "grid",
           "layout",
-          "plus",
           "rectangle",
           "shapes",
           "square",
@@ -14285,7 +14283,6 @@
       {
         "name": "cake",
         "tags": [
-          "add",
           "baked",
           "birthday",
           "cake",
@@ -14294,14 +14291,11 @@
           "dessert",
           "food",
           "frosting",
-          "new",
           "party",
           "pastries",
           "pastry",
-          "plus",
           "social",
-          "sweet",
-          "symbol"
+          "sweet"
         ]
       },
       {
@@ -14632,8 +14626,6 @@
       {
         "name": "emoji_emotions",
         "tags": [
-          "+",
-          "add",
           "emoji",
           "emotions",
           "expressions",
@@ -14642,20 +14634,14 @@
           "glad",
           "happiness",
           "happy",
-          "icon",
-          "icons",
-          "insert",
           "like",
           "mood",
-          "new",
           "person",
           "pleased",
-          "plus",
           "smile",
           "smiling",
           "social",
-          "survey",
-          "symbol"
+          "survey"
         ]
       },
       {
@@ -21785,30 +21771,20 @@
       {
         "name": "flight",
         "tags": [
-          "ai",
           "air",
           "aircraft",
           "airplane",
           "airplanes",
           "airport",
-          "artificial intelligence",
-          "automation",
-          "clover",
           "flight",
           "flights",
           "fly",
           "flying",
-          "genai",
-          "intelligence",
-          "magic",
           "mode",
           "on",
           "plane",
           "planes",
           "signal",
-          "spark",
-          "sparkle",
-          "star",
           "transportation",
           "travel",
           "trip"
@@ -31323,9 +31299,15 @@
       {
         "name": "numbers",
         "tags": [
-          "digit",
+          "hash",
+          "hashtag",
+          "key",
+          "media",
           "numbers",
-          "symbol"
+          "pound",
+          "social",
+          "tag",
+          "trend"
         ]
       },
       {
@@ -31462,6 +31444,7 @@
       {
         "name": "rectangle",
         "tags": [
+          "crop",
           "four sides",
           "parallelograms",
           "polygons",
